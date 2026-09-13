@@ -1,0 +1,20 @@
+{
+  "name": "parkable",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal parking knowledge base — monorepo root",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build:shared": "npm run build --workspace @parkable/shared",
+    "dev:backend": "npm run start:dev --workspace @parkable/backend",
+    "dev:frontend": "npm run dev --workspace @parkable/frontend",
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
