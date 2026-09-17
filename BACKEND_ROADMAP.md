@@ -61,12 +61,12 @@
 - How Nest's CLI scaffolds things (`nest generate ...`).
 
 **Build:**
-- [ ] Scaffold a Nest app in `apps/backend` (name it `@parkable/backend` to match the workspace).
-- [ ] Get a health-check route responding (e.g. `GET /health` → `{ status: 'ok' }`).
-- [ ] Wire it into the npm workspace so `npm run dev:backend` from the root works.
+- [x] Scaffold a Nest app in `apps/backend` (name it `@parkable/backend` to match the workspace).
+- [x] Get a health-check route responding (e.g. `GET /health` → `{ status: 'ok' }`).
+- [x] Wire it into the npm workspace so `npm run dev:backend` from the root works.
 
 **Verify:**
-- [ ] `curl localhost:3000/health` returns your JSON.
+- [x] `curl localhost:3000/health` returns your JSON.
 
 **Done when:** the server boots and a route responds over HTTP.
 
