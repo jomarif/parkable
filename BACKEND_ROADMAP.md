@@ -84,12 +84,12 @@
 - The difference between config the *backend* needs vs. what docker-compose injects.
 
 **Build:**
-- [ ] Install and register `@nestjs/config` (global).
-- [ ] Define the vars you'll need: `DATABASE_URL`, `JWT_SECRET`, `JWT_EXPIRES_IN`, `PORT`, `CORS_ORIGIN`, `COOKIE_SECURE`.
-- [ ] Add startup validation (schema check).
+- [x] Install and register `@nestjs/config` (global).
+- [x] Define the vars you'll need: `DATABASE_URL`, `JWT_SECRET`, `JWT_EXPIRES_IN`, `PORT`, `CORS_ORIGIN`, `COOKIE_SECURE`.
+- [x] Add startup validation (schema check).
 
 **Verify:**
-- [ ] Temporarily remove a required var → the app refuses to start with a clear error.
+- [x] Temporarily remove a required var → the app refuses to start with a clear error.
 
 **Done when:** config is read from env, validated, and injectable.
 
@@ -108,18 +108,18 @@
 - How to enable the PostGIS extension inside a migration (`CREATE EXTENSION IF NOT EXISTS postgis;`).
 
 **Build:**
-- [ ] Install Prisma, init it, point `DATABASE_URL` at your compose DB.
-- [ ] Model `User` and `ParkingSpot` in `schema.prisma` per the data model in `PROJECT_PLAN.md` (note the reserved `visibility` field).
-- [ ] Create the first migration; add the `CREATE EXTENSION` for PostGIS to it.
-- [ ] Wire a `PrismaService` into Nest (a provider that manages the client's lifecycle).
+- [X] Install Prisma, init it, point `DATABASE_URL` at your compose DB.
+- [X] Model `User` and `ParkingSpot` in `schema.prisma` per the data model in `PROJECT_PLAN.md` (note the reserved `visibility` field).
+- [X] Create the first migration; add the `CREATE EXTENSION` for PostGIS to it.
+- [X] Wire a `PrismaService` into Nest (a provider that manages the client's lifecycle).
 
 **Verify:**
-- [ ] Migration applies cleanly; `\dt` in psql shows your tables.
-- [ ] `SELECT postgis_version();` still works (extension enabled inside the tracked migration, not manually).
+- [X] Migration applies cleanly; `\dt` in psql shows your tables.
+- [X] `SELECT postgis_version();` still works (extension enabled inside the tracked migration, not manually).
 
 **Done when:** tables exist via a migration and Nest can query through Prisma.
 
----
+--- 
 
 ## Goal 4 — Your test harness: validation + Swagger
 
